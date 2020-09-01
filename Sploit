@@ -1,0 +1,16 @@
+import hashlib
+
+org_text = 'OWNkYzE1ZmMxNTc3MDkyNw=='
+#final_result = []
+
+m = hashlib.md5()
+i = 0
+#for decrpyt in range(0,50):
+while i<50:
+    m.update(org_text.encode())
+    result = m.hexdigest()
+    org_text = result
+    i += 1
+    #for a in range(16):
+    final_result = org_text[0:16]
+    print(final_result)
